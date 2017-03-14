@@ -1,0 +1,11 @@
+version: '2'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /init.sh
+    tty: true
+    stdin_open: true
+    ports:
+      - "80:80"
